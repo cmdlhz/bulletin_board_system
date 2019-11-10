@@ -4,9 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Messages</title>
 </head>
 <body>
-
+<%
+String msg = (String)request.getAttribute("msg");
+String url = (String)request.getAttribute("url");
+%>
+<script>
+alert('<%= msg %>');
+location.href='<%= url %>';
+</script>
 </body>
 </html>
